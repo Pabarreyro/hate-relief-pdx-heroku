@@ -1,17 +1,24 @@
 {
-  "name": "hate-relief-pdx-clone",
+  "name": "hate-relief-pdx",
   "version": "0.0.0",
+  "engines": {
+    "node": "9.11.1",
+    "npm": "5.6.0"
+  },
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build --prod",
+    "start": "node server.js",
+    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "ng build"
   },
   "private": true,
   "dependencies": {
+    "@angular/cli": "1.6.5",
+    "@angular/compiler-cli": "^5.2.0",
     "@angular/animations": "^5.2.0",
     "@angular/common": "^5.2.0",
     "@angular/compiler": "^5.2.0",
@@ -21,7 +28,11 @@
     "@angular/platform-browser": "^5.2.0",
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
+    "body-parser": "^1.18.2",
+    "bootstrap": "^4.1.1",
     "core-js": "^2.4.1",
+    "express": "^4.16.3",
+    "mongodb": "^3.1.0-beta4",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"
   },
