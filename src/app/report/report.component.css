@@ -1,0 +1,41 @@
+#disclaimer {
+  padding:0.25rem;
+  border-radius:0.25rem;
+  text-align: center;
+  margin: 0 0 2rem;
+}
+
+/* Report_landing instructions card */
+#instructions h4 {
+  margin-top: .5rem;
+}
+
+.report-option {
+  background-color: #eff0f1;
+  margin: 1rem auto auto;
+  padding: 10px;
+  border-radius: 0.25rem;
+  text-align: center;
+}
+
+.report-option button {
+  margin: auto auto;
+}
+
+.center {
+  background-color: #eff0f1;
+  margin: auto auto;
+  margin-top: 20px;
+  border-radius: 0.25rem;
+  padding: 10px;
+}
+
+.center h6 {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.center a {
+  text-align: center;
+  margin: 0 auto;
+}

@@ -1,0 +1,12 @@
+#resource-search {
+  margin-top: 2rem;
+}
+
+#filter-button {
+  margin-top: .5rem;
+}
+
+/*Concert Listing*/
+.no-display{
+  display: none;
+}
