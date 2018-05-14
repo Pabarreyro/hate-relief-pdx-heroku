@@ -10,8 +10,6 @@
 
 <strong>Hate Relief PDX</strong> expands on this functionality by displaying local community-based organizations and government agencies that provide other resources (<em>e.g.</em>, trainings, mental health guidance, safe space, advocacy and political action). Users will also have the option of submitting their reports non-anonymously, in which case their reports will be made available to relevant CBOs and/or agencies, allowing those organizations to follow up.
 
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 <strong>[View demo](https://salty-woodland-52751.herokuapp.com/)</strong>
 #### Specifications
 
