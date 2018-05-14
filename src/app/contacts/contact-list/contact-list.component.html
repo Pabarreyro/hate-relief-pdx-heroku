@@ -13,14 +13,10 @@
     <button class="btn btn-warning" (click)="createNewResource()">New</button>
     </div>
   </div>
-  <div class="col-md-5 col-md-offset-2 card">
-    <div class="card-body">
-      <contact-details
+    <contact-details
       [resource]="selectedResource"
       [createHandler]="addResource"
       [updateHandler]="updateResource"
       [deleteHandler]="deleteResource">
     </contact-details>
-    </div>
-  </div>
 </div>
