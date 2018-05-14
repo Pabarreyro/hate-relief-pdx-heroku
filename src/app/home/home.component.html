@@ -1,3 +1,52 @@
-<p>
-  home works!
-</p>
+<section class="jumbotron text-center" id="intro_row">
+  <div class="container">
+    <a href="https://www.portlandoregon.gov/oni/72583">
+      <img src="../assets/puah_logo.jpg" alt="PUAH logo">
+    </a>
+    <h1 class="jumbotron-heading">about us &#60;/&#62; by us</h1>
+    <p class="lead">This site is a resource for individuals and communities in Portland seeking to heal from, respond to and prevent hateful acts.</p>
+    <hr>
+    <div >
+      <p>Powered by <a href="https://www.portlandoregon.gov/oni/72583"><code>Portland United Against Hate</code></a>
+         (<code>PUAH</code>), a coalition of community-based organizations, neighborhood associations, concerned communities, and the City of Portland. </p>
+      <button routerLink="about" class="btn btn-danger my-2">learn more</button>
+    </div>
+  </div>
+</section>
+<section class="jumbotron text-center"  id="report_row">
+  <div class="container">
+    <h1 class="jumbotron-heading">Witness or experience a hate incident?</h1>
+    <p class="lead">Report it online or get connected with a <code>PUAH <a href="https://www.portlandoregon.gov/oni/72583">partner</a></code> and report in person. Tell us only what you want to, it's all confidential.</p>
+    <p>
+      <a routerLink="report" class="btn btn-info my-2">Report an Incident</a>
+    </p>
+  </div>
+</section>
+<section class="carousel">
+  <ngb-carousel>
+    <ng-template class="carousel-item" ngbSlide>
+      <img src="./assets/support.jpg" alt="Random first slide">
+      <div class="carousel-caption">
+        <p><a class="btn btn-lg btn-light" routerLink="connect" role="button">Get Support</a></p>
+        <h1>Find Support</h1>
+        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+      </div>
+    </ng-template>
+    <ng-template class="carousel-item" ngbSlide>
+      <img src="./assets/advocacy.jpg" alt="Random second slide">
+      <div class="carousel-caption">
+        <p><a class="btn btn-lg btn-danger" routerLink="connect" role="button">Get Involved</a></p>
+        <h1>Find Support</h1>
+        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+      </div>
+    </ng-template>
+    <ng-template class="carousel-item" ngbSlide>
+      <img src="./assets/mediation.jpg" alt="Random third slide">
+      <div class="carousel-caption">
+        <p><a class="btn btn-lg btn-info" routerLink="connect" role="button">Get Help</a></p>
+        <h1>Get </h1>
+        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</section>
