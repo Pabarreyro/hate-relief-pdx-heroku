@@ -20,6 +20,7 @@ About component provides a background on hate crimes, victims' rights, and [Port
 Report component dynamically displays incident report form based on whether user wants to report anonymously, non-anonymously, or in person |  ['File report' button] | "How would you like to make your report?..."
 Review component displays incident report details and lets user edit before submission |  ['Save & Review' button] | "Please take a moment to review your report and make changes..."
 Connect component displays incident report confirmation number, a customized list of recommended organizations and a separate form for browsing through the full directory of organizations | 'Submit button' | "Thank you for sharing your experience, we recommend talking to..."
+Admin component displays list of resources and allows authenticated users to create, update or delete resources | 'Admin link' | "Admin dashboard..."
 
 ## Setup/Installation Requirements
 
