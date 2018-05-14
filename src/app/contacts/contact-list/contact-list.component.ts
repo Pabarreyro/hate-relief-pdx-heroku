@@ -24,8 +24,8 @@ export class ContactListComponent implements OnInit {
         this.contacts = contacts.map((contact) => {
           if (!contact.phone) {
             contact.phone = {
-              mobile: '',
-              work: ''
+              main: '',
+              fax: ''
             }
           }
           return contact;
@@ -45,11 +45,20 @@ export class ContactListComponent implements OnInit {
 
   createNewContact() {
     var contact: Contact = {
+      _id: '',
       name: '',
+      description: '',
       email: '',
       phone: {
-        work: '',
-        mobile: ''
+        main: '',
+        fax: '',
+      },
+      address: {
+        street: '',
+        floor: '',
+        city: '',
+        state: '',
+        zip: '',
       }
     };
 
