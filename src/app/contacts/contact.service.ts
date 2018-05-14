@@ -1,46 +1,46 @@
 import { Injectable } from '@angular/core';
-import { Contact } from './contact';
+import { Resource } from './contact';
 import { Http, Response } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class ContactService {
-    private contactsUrl = '/api/contacts';
+    private resourcesUrl = '/api/resources';
 
     constructor (private http: Http) {}
 
-    // get("/api/contacts")
-    getContacts(): Promise<void | Contact[]> {
-      return this.http.get(this.contactsUrl)
+    // get("/api/resources")
+    getResources(): Promise<void | Resource[]> {
+      return this.http.get(this.resourcesUrl)
                  .toPromise()
-                 .then(response => response.json() as Contact[])
+                 .then(response => response.json() as Resource[])
                  .catch(this.handleError);
     }
 
-    // post("/api/contacts")
-    createContact(newContact: Contact): Promise<void | Contact> {
-      return this.http.post(this.contactsUrl, newContact)
+    // post("/api/resources")
+    createResource(newResource: Resource): Promise<void | Resource> {
+      return this.http.post(this.resourcesUrl, newResource)
                  .toPromise()
-                 .then(response => response.json() as Contact)
+                 .then(response => response.json() as Resource)
                  .catch(this.handleError);
     }
 
-    // get("/api/contacts/:id") endpoint not used by Angular app
+    // get("/api/resources/:id") endpoint not used by Angular app
 
-    // delete("/api/contacts/:id")
-    deleteContact(delContactId: String): Promise<void | String> {
-      return this.http.delete(this.contactsUrl + '/' + delContactId)
+    // delete("/api/resources/:id")
+    deleteResource(delResourceId: String): Promise<void | String> {
+      return this.http.delete(this.resourcesUrl + '/' + delResourceId)
                  .toPromise()
                  .then(response => response.json() as String)
                  .catch(this.handleError);
     }
 
-    // put("/api/contacts/:id")
-    updateContact(putContact: Contact): Promise<void | Contact> {
-      var putUrl = this.contactsUrl + '/' + putContact._id;
-      return this.http.put(putUrl, putContact)
+    // put("/api/resources/:id")
+    updateResource(putResource: Resource): Promise<void | Resource> {
+      var putUrl = this.resourcesUrl + '/' + putResource._id;
+      return this.http.put(putUrl, putResource)
                  .toPromise()
-                 .then(response => response.json() as Contact)
+                 .then(response => response.json() as Resource)
                  .catch(this.handleError);
     }
 

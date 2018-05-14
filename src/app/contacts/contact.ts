@@ -1,4 +1,4 @@
-export class Contact {
+export class Resource {
   _id?: string;
   name: string;
   description: string;
@@ -14,4 +14,7 @@ export class Contact {
     state: string;
     zip: string;
   };
+  region: string;
+  communities: string[];
+  services: string[]
 }

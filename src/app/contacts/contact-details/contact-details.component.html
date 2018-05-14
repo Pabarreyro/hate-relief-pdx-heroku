@@ -1,45 +1,45 @@
-<div *ngIf="contact" class="row">
+<div *ngIf="resource" class="row">
   <div class="col-md-12">
-    <h2 *ngIf="contact._id">Contact Details</h2>
-    <h2 *ngIf="!contact._id">New Contact</h2>
+    <h2 *ngIf="resource._id">Resource Details</h2>
+    <h2 *ngIf="!resource._id">New Resource</h2>
   </div>
 </div>
-<div *ngIf="contact" class="row">
+<div *ngIf="resource" class="row">
   <form class="col-md-12">
     <div class="form-group">
-      <label for="contact-name">Name</label>
-      <input class="form-control" name="contact-name" [(ngModel)]="contact.name" placeholder="Name"/>
+      <label for="resource-name">Name</label>
+      <input class="form-control" name="resource-name" [(ngModel)]="resource.name" placeholder="Name"/>
     </div>
     <div class="form-group">
-      <label for="contact-email">Email</label>
-      <input class="form-control" name="contact-email" [(ngModel)]="contact.email" placeholder="support@mlab.com"/>
+      <label for="resource-email">Email</label>
+      <input class="form-control" name="resource-email" [(ngModel)]="resource.email" placeholder="support@mlab.com"/>
     </div>
     <div class="form-group">
-      <label for="contact-phone-main">Main</label>
-      <input class="form-control" name="contact-phone-main" [(ngModel)]="contact.phone.main" placeholder="1234567890"/>
+      <label for="resource-phone-main">Main</label>
+      <input class="form-control" name="resource-phone-main" [(ngModel)]="resource.phone.main" placeholder="1234567890"/>
     </div>
     <div class="form-group">
-      <label for="contact-phone-fax">Fax</label>
-      <input class="form-control" name="contact-phone-fax" [(ngModel)]="contact.phone.fax" placeholder="0123456789"/>
+      <label for="resource-phone-fax">Fax</label>
+      <input class="form-control" name="resource-phone-fax" [(ngModel)]="resource.phone.fax" placeholder="0123456789"/>
     </div>
     <div class="form-group">
-      <label for="contact-address-street">Address</label>
-      <input class="form-control" name="contact-address-street" [(ngModel)]="contact.address.street" placeholder="12345 NE Glisan St"/>
+      <label for="resource-address-street">Address</label>
+      <input class="form-control" name="resource-address-street" [(ngModel)]="resource.address.street" placeholder="12345 NE Glisan St"/>
     </div>
     <div class="form-group">
-      <label for="contact-address-floor">Floor</label>
-      <input class="form-control" name="contact-address-floor" [(ngModel)]="contact.address.floor" placeholder="Ste. 201"/>
+      <label for="resource-address-floor">Floor</label>
+      <input class="form-control" name="resource-address-floor" [(ngModel)]="resource.address.floor" placeholder="Ste. 201"/>
     </div>
     <div class="form-group">
-      <label for="contact-address-city">City</label>
-      <input class="form-control" name="contact-address-city" [(ngModel)]="contact.address.city" placeholder="Portland"/>
+      <label for="resource-address-city">City</label>
+      <input class="form-control" name="resource-address-city" [(ngModel)]="resource.address.city" placeholder="Portland"/>
     </div>
     <div class="form-group">
-      <label for="contact-address-zip">Zip</label>
-      <input class="form-control" name="contact-address-zip" [(ngModel)]="contact.address.zip" placeholder="97230"/>
+      <label for="resource-address-zip">Zip</label>
+      <input class="form-control" name="resource-address-zip" [(ngModel)]="resource.address.zip" placeholder="97230"/>
     </div>
-    <button class="btn btn-primary" *ngIf="!contact._id" (click)="createContact(contact)">Create</button>
-    <button class="btn btn-info" *ngIf="contact._id" (click)="updateContact(contact)">Update</button>
-    <button class="btn btn-danger" *ngIf="contact._id" (click)="deleteContact(contact._id)">Delete</button>
+    <button class="btn btn-primary" *ngIf="!resource._id" (click)="createResource(resource)">Create</button>
+    <button class="btn btn-info" *ngIf="resource._id" (click)="updateResource(resource)">Update</button>
+    <button class="btn btn-danger" *ngIf="resource._id" (click)="deleteResource(resource._id)">Delete</button>
   </form>
 </div>

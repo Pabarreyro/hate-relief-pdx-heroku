@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Contact } from '../contact';
+import { Resource } from '../contact';
 import { ContactService } from '../contact.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { ContactService } from '../contact.service';
 
 export class ContactDetailsComponent {
   @Input()
-  contact: Contact;
+  resource: Resource;
 
   @Input()
   createHandler: Function;
@@ -21,21 +21,21 @@ export class ContactDetailsComponent {
 
   constructor (private contactService: ContactService) {}
 
-  createContact(contact: Contact) {
-    this.contactService.createContact(contact).then((newContact: Contact) => {
-      this.createHandler(newContact);
+  createResource(resource: Resource) {
+    this.contactService.createResource(resource).then((newResource: Resource) => {
+      this.createHandler(newResource);
     });
   }
 
-  updateContact(contact: Contact): void {
-    this.contactService.updateContact(contact).then((updatedContact: Contact) => {
-      this.updateHandler(updatedContact);
+  updateResource(resource: Resource): void {
+    this.contactService.updateResource(resource).then((updatedResource: Resource) => {
+      this.updateHandler(updatedResource);
     });
   }
 
-  deleteContact(contactId: String): void {
-    this.contactService.deleteContact(contactId).then((deletedContactId: String) => {
-      this.deleteHandler(deletedContactId);
+  deleteResource(resourceId: String): void {
+    this.contactService.deleteResource(resourceId).then((deletedResourceId: String) => {
+      this.deleteHandler(deletedResourceId);
     });
   }
 }

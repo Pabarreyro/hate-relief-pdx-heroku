@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Contact } from '../contact';
+import { Resource } from '../contact';
 import { ContactService } from '../contact.service';
 import { ContactDetailsComponent } from '../contact-details/contact-details.component';
 
@@ -12,39 +12,39 @@ import { ContactDetailsComponent } from '../contact-details/contact-details.comp
 
 export class ContactListComponent implements OnInit {
 
-  contacts: Contact[]
-  selectedContact: Contact
+  resources: Resource[]
+  selectedResource: Resource
 
   constructor(private contactService: ContactService) { }
 
   ngOnInit() {
      this.contactService
-      .getContacts()
-      .then((contacts: Contact[]) => {
-        this.contacts = contacts.map((contact) => {
-          if (!contact.phone) {
-            contact.phone = {
+      .getResources()
+      .then((resources: Resource[]) => {
+        this.resources = resources.map((resource) => {
+          if (!resource.phone) {
+            resource.phone = {
               main: '',
               fax: ''
             }
           }
-          return contact;
+          return resource;
         });
       });
   }
 
-  private getIndexOfContact = (contactId: String) => {
-    return this.contacts.findIndex((contact) => {
-      return contact._id === contactId;
+  private getIndexOfResource = (resourceId: String) => {
+    return this.resources.findIndex((resource) => {
+      return resource._id === resourceId;
     });
   }
 
-  selectContact(contact: Contact) {
-    this.selectedContact = contact
+  selectResource(resource: Resource) {
+    this.selectedResource = resource;
   }
 
-  createNewContact() {
-    let contact: Contact = {
+  createNewResource() {
+    let resource: Resource = {
       name: '',
       description: '',
       email: '',
@@ -58,34 +58,37 @@ export class ContactListComponent implements OnInit {
         city: '',
         state: '',
         zip: '',
-      }
+      },
+      region: '',
+      communities: [],
+      services: []
     };
 
-    // By default, a newly-created contact will have the selected state.
-    this.selectContact(contact);
+    // By default, a newly-created resource will have the selected state.
+    this.selectResource(resource);
   }
 
-  deleteContact = (contactId: String) => {
-    let idx = this.getIndexOfContact(contactId);
+  deleteResource = (resourceId: String) => {
+    let idx = this.getIndexOfResource(resourceId);
     if (idx !== -1) {
-      this.contacts.splice(idx, 1);
-      this.selectContact(null);
+      this.resources.splice(idx, 1);
+      this.selectResource(null);
     }
-    return this.contacts;
+    return this.resources;
   }
 
-  addContact = (contact: Contact) => {
-    this.contacts.push(contact);
-    this.selectContact(contact);
-    return this.contacts;
+  addResource = (resource: Resource) => {
+    this.resources.push(resource);
+    this.selectResource(resource);
+    return this.resources;
   }
 
-  updateContact = (contact: Contact) => {
-    let idx = this.getIndexOfContact(contact._id);
+  updateResource = (resource: Resource) => {
+    let idx = this.getIndexOfResource(resource._id);
     if (idx !== -1) {
-      this.contacts[idx] = contact;
-      this.selectContact(contact);
+      this.resources[idx] = resource;
+      this.selectResource(resource);
     }
-    return this.contacts;
+    return this.resources;
   }
 }
