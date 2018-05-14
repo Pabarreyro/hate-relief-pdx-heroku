@@ -43,7 +43,10 @@ https://tranquil-shore-75468.herokuapp.com/ | https://git.heroku.com/tranquil-sh
 ```
 #### Provision MongoDB using mLab add-on
 
-Run `heroku addons:create mongolab` in root directory (you will need to have [verified your heroku account](https://devcenter.heroku.com/articles/account-verification) first).
+Run `heroku addons:create mongolab` in root directory (you will need to have [verified your heroku account](https://devcenter.heroku.com/articles/account-verification) first). This will contribute a config variable to your Heroku environment called `MONGODB_URI`. You can confirm this by using the `heroku config` command. Example:
+```$ heroku config:get MONGODB_URI
+MONGODB_URI => mongodb://heroku_12345678:random_password@ds029017.mLab.com:29017/heroku_12345678
+```
 
 #### Development server
 
