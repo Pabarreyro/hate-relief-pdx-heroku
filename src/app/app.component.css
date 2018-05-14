@@ -10,6 +10,9 @@ header {
 body > .container {
   padding: 1rem 2rem 0;
 }
+main {
+  margin-bottom: 5rem;
+}
 
 .footer {
   position: fixed;
