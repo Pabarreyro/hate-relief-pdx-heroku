@@ -1,8 +1,9 @@
 <div class="row">
-  <div class="col-md-5">
-    <h2>Resources</h2>
-    <ul class="list-group">
-      <li class="list-group-item resource"
+  <div class="col-md-5 card">
+    <div class="card-body">
+      <h2 class="card-title">Resources</h2>
+      <ul class="list-group">
+        <li class="list-group-item resource"
         *ngFor="let resource of resources"
         (click)="selectResource(resource)"
         [class.active]="resource === selectedResource">
@@ -10,13 +11,16 @@
       </li>
     </ul>
     <button class="btn btn-warning" (click)="createNewResource()">New</button>
+    </div>
   </div>
-  <div class="col-md-5 col-md-offset-2">
-    <contact-details
+  <div class="col-md-5 col-md-offset-2 card">
+    <div class="card-body">
+      <contact-details
       [resource]="selectedResource"
       [createHandler]="addResource"
       [updateHandler]="updateResource"
       [deleteHandler]="deleteResource">
     </contact-details>
+    </div>
   </div>
 </div>
