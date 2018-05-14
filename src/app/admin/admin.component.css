@@ -1,3 +1,7 @@
 .resource:hover {
   cursor: pointer;
 }
+
+#admin-card {
+  padding: 1rem;
+}
