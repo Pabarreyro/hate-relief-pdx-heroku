@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent }   from './about/about.component';
 import { ReportComponent } from './report/report.component';
 import { ConnectComponent } from './connect/connect.component';
+import { LoginComponent } from './login/login.component';
 
 
 const appRoutes: Routes = [
@@ -27,6 +28,10 @@ const appRoutes: Routes = [
   {
     path: 'admin',
     component: AdminComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   }
 ];
 

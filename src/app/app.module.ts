@@ -13,6 +13,7 @@ import { AboutComponent } from './about/about.component';
 import { ReportComponent } from './report/report.component';
 import { ConnectComponent } from './connect/connect.component';
 import { routing } from './app.routing';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { routing } from './app.routing';
     HomeComponent,
     AboutComponent,
     ReportComponent,
-    ConnectComponent
+    ConnectComponent,
+    LoginComponent
   ],
   imports: [
     NgbModule.forRoot(),
