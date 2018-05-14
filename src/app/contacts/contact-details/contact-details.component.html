@@ -1,45 +1,47 @@
-<div *ngIf="resource" class="card row">
-  <div class="col-md-12">
-    <h2 *ngIf="resource._id">Resource Details</h2>
-    <h2 *ngIf="!resource._id">New Resource</h2>
+<section *ngIf="resource" class="card">
+  <div class="row">
+    <div class="col-md-12">
+      <h2 *ngIf="resource._id">Resource Details</h2>
+      <h2 *ngIf="!resource._id">New Resource</h2>
+    </div>
   </div>
-</div>
-<div *ngIf="resource" class="row">
-  <form class="col-md-12">
-    <div class="form-group">
-      <label for="resource-name">Name</label>
-      <input class="form-control" name="resource-name" [(ngModel)]="resource.name" placeholder="Name"/>
-    </div>
-    <div class="form-group">
-      <label for="resource-email">Email</label>
-      <input class="form-control" name="resource-email" [(ngModel)]="resource.email" placeholder="support@mlab.com"/>
-    </div>
-    <div class="form-group">
-      <label for="resource-phone-main">Main</label>
-      <input class="form-control" name="resource-phone-main" [(ngModel)]="resource.phone.main" placeholder="1234567890"/>
-    </div>
-    <div class="form-group">
-      <label for="resource-phone-fax">Fax</label>
-      <input class="form-control" name="resource-phone-fax" [(ngModel)]="resource.phone.fax" placeholder="0123456789"/>
-    </div>
-    <div class="form-group">
-      <label for="resource-address-street">Address</label>
-      <input class="form-control" name="resource-address-street" [(ngModel)]="resource.address.street" placeholder="12345 NE Glisan St"/>
-    </div>
-    <div class="form-group">
-      <label for="resource-address-floor">Floor</label>
-      <input class="form-control" name="resource-address-floor" [(ngModel)]="resource.address.floor" placeholder="Ste. 201"/>
-    </div>
-    <div class="form-group">
-      <label for="resource-address-city">City</label>
-      <input class="form-control" name="resource-address-city" [(ngModel)]="resource.address.city" placeholder="Portland"/>
-    </div>
-    <div class="form-group">
-      <label for="resource-address-zip">Zip</label>
-      <input class="form-control" name="resource-address-zip" [(ngModel)]="resource.address.zip" placeholder="97230"/>
-    </div>
-    <button class="btn btn-primary" *ngIf="!resource._id" (click)="createResource(resource)">Create</button>
-    <button class="btn btn-info" *ngIf="resource._id" (click)="updateResource(resource)">Update</button>
-    <button class="btn btn-danger" *ngIf="resource._id" (click)="deleteResource(resource._id)">Delete</button>
-  </form>
-</div>
+  <div *ngIf="resource" class="row">
+    <form class="col-md-12">
+      <div class="form-group">
+        <label for="resource-name">Name</label>
+        <input class="form-control" name="resource-name" [(ngModel)]="resource.name" placeholder="Name"/>
+      </div>
+      <div class="form-group">
+        <label for="resource-email">Email</label>
+        <input class="form-control" name="resource-email" [(ngModel)]="resource.email" placeholder="support@mlab.com"/>
+      </div>
+      <div class="form-group">
+        <label for="resource-phone-main">Main</label>
+        <input class="form-control" name="resource-phone-main" [(ngModel)]="resource.phone.main" placeholder="1234567890"/>
+      </div>
+      <div class="form-group">
+        <label for="resource-phone-fax">Fax</label>
+        <input class="form-control" name="resource-phone-fax" [(ngModel)]="resource.phone.fax" placeholder="0123456789"/>
+      </div>
+      <div class="form-group">
+        <label for="resource-address-street">Address</label>
+        <input class="form-control" name="resource-address-street" [(ngModel)]="resource.address.street" placeholder="12345 NE Glisan St"/>
+      </div>
+      <div class="form-group">
+        <label for="resource-address-floor">Floor</label>
+        <input class="form-control" name="resource-address-floor" [(ngModel)]="resource.address.floor" placeholder="Ste. 201"/>
+      </div>
+      <div class="form-group">
+        <label for="resource-address-city">City</label>
+        <input class="form-control" name="resource-address-city" [(ngModel)]="resource.address.city" placeholder="Portland"/>
+      </div>
+      <div class="form-group">
+        <label for="resource-address-zip">Zip</label>
+        <input class="form-control" name="resource-address-zip" [(ngModel)]="resource.address.zip" placeholder="97230"/>
+      </div>
+      <button class="btn btn-primary" *ngIf="!resource._id" (click)="createResource(resource)">Create</button>
+      <button class="btn btn-info" *ngIf="resource._id" (click)="updateResource(resource)">Update</button>
+      <button class="btn btn-danger" *ngIf="resource._id" (click)="deleteResource(resource._id)">Delete</button>
+    </form>
+  </div>
+</section>
